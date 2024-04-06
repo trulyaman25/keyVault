@@ -1,0 +1,90 @@
+@font-face {
+	font-family: bigJohn;
+	src: url('../assets/fonts/BIG_JOHN.otf');
+}
+
+@font-face {
+	font-family: poppins;
+	font-weight: 400;
+	src: url('../assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: poppins;
+	font-weight: 500;
+	src: url('../assets/fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: poppins;
+	font-weight: 600;
+	src: url('../assets/fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: poppins;
+	font-weight: 700;
+	src: url('../assets/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: poppins;
+	font-weight: 800;
+	src: url('../assets/fonts/poppins/Poppins-ExtraBold.ttf');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: poppins;
+	font-weight: 400;
+	--non-photo-blue: #BEEAF1ff;
+	--white: #FDFBFBff;
+	--carolina-blue: rgb(46, 188, 235);
+	--celestial-blue: #0099E8ff;
+	--white-2: #FBFBFBff;
+	--slate-gray: #808697ff;
+	--gunmetal: #2A313Eff;
+	--cerulean: #156E97ff;
+	--dim-gray: rgb(62, 67, 71);
+	--alice-blue: #DDE7EBff;
+	--cerulean: #156E97ff;
+	--prussian-blue: #223B55ff;
+	--antiflash-white: #EBEDEEff;
+	--columbia-blue: #CFEAFCff;
+	--sky-blue: #89D4EAff;
+    --picton-blue: rgb(207, 235, 253);
+    --indigo-dye: #034B7Fff;
+    --moonstone: rgb(52, 203, 230);
+    --cerulean: #2583AAff;
+}
+
+.section {
+	width: 100%;
+	height: 700px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contentSection {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fade_rule {
+	height: 1px;
+	background-color: #E6E6E6;
+	width: 50%;
+	margin: 0 auto;
+	background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+	background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+	background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+	background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+	background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+	background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white) );
+}

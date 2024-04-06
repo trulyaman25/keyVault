@@ -1,0 +1,115 @@
+@import url("globalStyles.css");
+
+#introSection{
+    height: auto;
+}
+
+#introSection .contentSection {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+
+#introSection .contentSection :nth-child(1) {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+#introSection .contentSection :nth-child(3) {
+    width: 1000px;
+    text-align: center;
+    font-size: 17.5px;
+    font-weight: 400;
+    color: var(--dim-gray);
+    box-sizing: border-box;
+    margin: 20px 0px 20px 0px;
+}
+
+#cardSection {
+    width:auto;
+    height: 700px;
+    margin: 30px;
+    box-sizing: border-box;
+}
+
+#cardSection .contentSection {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nameCard{
+    width: 475px;
+    height: 675px;
+    padding: 15px;
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    background-color: rgb(208, 233, 255);
+}
+
+.nameCard:hover{
+    box-shadow: 5px 5px 20px #55555559;
+    transform: translateY(-5px);
+    transform: scale(1.05);
+}
+
+.nameCard .profilePhoto {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 15px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#amanCard .profilePhoto {
+    background-image: url('../assets/images/teamMembers/amanImg.jpg');
+}
+
+#aakashCard .profilePhoto {
+    background-image: url('../assets/images/teamMembers/aakashImg.jpg');
+    
+}
+
+#yashCard .profilePhoto {
+    background-image: url('../assets/images/teamMembers/yashImg.jpg');
+}
+
+.nameCard .name {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 15px 15px 0px 15px;
+}
+
+.nameCard .preDescription {
+    font-size: 17.5px;
+    color: var(--dim-gray);
+}
+
+#yashCard .preDescription {
+    margin-top: 40px;
+}
+
+.nameCard .details {
+    width: 85%;
+    height: 150px;
+    color: var(--dim-gray);
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: flex-start;
+    align-items: center;
+}
