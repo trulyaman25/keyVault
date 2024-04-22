@@ -1,7 +1,7 @@
 import React from 'react'
 import {useTypewriter, Cursor} from 'react-simple-typewriter'
-import './stylesheet/globalStyles.css'
-import './stylesheet/homeStyles.css'
+import '../globalStyles.css'
+import './homeStyles.css'
 
 function Home() {
     const [typeEffect] = useTypewriter({

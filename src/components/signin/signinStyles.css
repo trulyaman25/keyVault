@@ -1,32 +1,7 @@
-@import url("globalStyles.css");
+@import url("../globalStyles.css");
 
-#signupSection {
-    margin-bottom: 40px;
-}
-
-#signupSection .contentSection {
-    justify-content: space-between;
-}
-
-.illustration {
-    width: 50%;
-    height: 100%;
-    background-image: url('../assets/images/illustration/SignupPage-IllustrationOneLight.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-.inputDiv {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.signUpCard {
-    height: 600px;
+.signInCard {
+    height: 420px;
     width: 450px;
     display: flex;
     padding: 40px;
@@ -38,13 +13,13 @@
     box-shadow: 5px 5px 20px #10101090;
 }
 
-.signUpCard h1 {
+.signInCard h1 {
     font-size: 40px;
     font-weight: 800;
     text-align: center;
 }
 
-.signUpForm {
+.signInForm {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -52,7 +27,7 @@
     margin-left: -2.5px;
 }
 
-.signUpForm p {
+.signInForm p {
     margin: 10px 0px 5px 0px;
     display: flex;
     flex-flow: column;
@@ -60,7 +35,7 @@
     align-content: center;
 }
 
-.signUpForm input {
+.signInForm input {
     background-color: var(--picton-blue);
     box-sizing: border-box;
     padding: 0px 25px 0px 25px;

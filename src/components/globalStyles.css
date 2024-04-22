@@ -1,36 +1,36 @@
 @font-face {
 	font-family: bigJohn;
-	src: url('../assets/fonts/BIG_JOHN.otf');
+	src: url('./assets/fonts/BIG_JOHN.otf');
 }
 
 @font-face {
 	font-family: poppins;
 	font-weight: 400;
-	src: url('../assets/fonts/poppins/Poppins-Regular.ttf');
+	src: url('./assets/fonts/poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
 	font-family: poppins;
 	font-weight: 500;
-	src: url('../assets/fonts/poppins/Poppins-Medium.ttf');
+	src: url('./assets/fonts/poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
 	font-family: poppins;
 	font-weight: 600;
-	src: url('../assets/fonts/poppins/Poppins-SemiBold.ttf');
+	src: url('./assets/fonts/poppins/Poppins-SemiBold.ttf');
 }
 
 @font-face {
 	font-family: poppins;
 	font-weight: 700;
-	src: url('../assets/fonts/poppins/Poppins-Bold.ttf');
+	src: url('./assets/fonts/poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
 	font-family: poppins;
 	font-weight: 800;
-	src: url('../assets/fonts/poppins/Poppins-ExtraBold.ttf');
+	src: url('./assets/fonts/poppins/Poppins-ExtraBold.ttf');
 }
 
 * {
@@ -53,7 +53,7 @@
 	--antiflash-white: #EBEDEEff;
 	--columbia-blue: #CFEAFCff;
 	--sky-blue: #89D4EAff;
-    --picton-blue: rgb(207, 235, 253);
+    --picton-blue: #cfebfd;
     --indigo-dye: #034B7Fff;
     --moonstone: rgb(52, 203, 230);
     --cerulean: #2583AAff;

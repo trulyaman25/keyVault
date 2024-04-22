@@ -1,5 +1,5 @@
-import './stylesheet/globalStyles.css'
-import './stylesheet/teamStyles.css'
+import '../globalStyles.css';
+import './teamStyles.css'
 
 function Team() {
     return (
@@ -24,7 +24,7 @@ function Team() {
                     <card className = 'nameCard' id = "aakashCard">
                         <div className="profilePhoto"></div>
                         <div className="name">Aakash Ranjan</div>
-                        <div className="preDescription">-Backend Developer</div>
+                        <div className="preDescription">-Frontend Developer</div>
                         <div className="details">Student at the National Institute of Technology in Raipur, Information Technology studies are a deep passion. Set to graduate in 2026, he has honed his skills in back-end development.</div>
                     </card>
                     <card className = 'nameCard' id = "yashCard">

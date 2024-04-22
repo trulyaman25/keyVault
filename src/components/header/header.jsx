@@ -1,5 +1,5 @@
-import './stylesheet/globalStyles.css'
-import './stylesheet/headerStyles.css'
+import '../globalStyles.css'
+import './headerStyles.css'
 
 function Header() {
 	return (

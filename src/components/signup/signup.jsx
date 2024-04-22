@@ -1,14 +1,15 @@
 import {React, useState} from 'react';
 import axios from "axios";
-import './stylesheet/globalStyles.css';
-import './stylesheet/signupStyles.css';
+import { useNavigate } from 'react-router-dom';
+import '../globalStyles.css';
+import './signupStyles.css';
 
 function Signup() {
-
     const [fullname,setFullname]=useState('')
     const [username,setUsername]=useState('')
     const [password,setPassword]=useState('')
     const [email,setEmail]=useState('')
+    const navigate = useNavigate(); 
 
     async function submit(e){
         console.log("calling");
@@ -18,6 +19,7 @@ function Signup() {
             .then(res=>{
                 if(res.data=="exist"){
                     alert("SUCCESFUL")
+                    navigate("/dashboard"); 
                 }
                 else if(res.data=="notexist"){
                     alert("USER CREATED SUCCESFULLY")

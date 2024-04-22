@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Header from "./components/header"
-import Footer from "./components/footer"
-import Home from "./components/home"
-import Signup from "./components/signup"
-import Signin from "./components/signin"
-import Team from "./components/team"
+import Header from "./components/header/header"
+import Footer from "./components/footer/footer"
+import Home from "./components/home/home"
+import Signup from "./components/signup/signup"
+import Signin from "./components/signin/signin"
+import Team from "./components/team/team"
+import Dashboard from "./components/dashboard/dashboard"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
@@ -19,6 +20,7 @@ function App() {
 						<Route path="/team" element={<Team/>}/>
 						<Route path="/signup" element={<Signup/>}/>
 						<Route path="/signin" element={<Signin/>}/>
+						<Route path="/dashboard" element={<Dashboard/>}/>
 				</Routes>
 			</Router>
 			<Footer></Footer>

@@ -18,28 +18,27 @@ const userSchema = new mongoose.Schema({
   password: String
 });
 
-const User = mongoose.model("User", userSchema);
+const UserCredential = mongoose.model("UserCredential", userSchema);
 
 app.post("/", async (req, res) => {
   const { username, password } = req.body;
 
-  const user = await User.findOne({ username, password });
+  const user = await UserCredential.findOne({ username, password });
 
   if (user) {
     res.json("exist");
   } else {
-    res.json("notexist");
-  }
+    res.json("notexist");}
 });
 
 app.post("/signup", async (req, res) => {
   const { fullname , username, email,password } = req.body;
-  const user = await User.findOne({ username });
-
+  const user = await UserCredential.findOne({ username });
+  
   if (user) res.json("exist");
   else {
     try {
-      const newUser = new User({ fullname, username, email,password });
+      const newUser = new UserCredential({ fullname, username, email,password });
       await newUser.save();
       res.json("notexist");
     } catch (error) {
