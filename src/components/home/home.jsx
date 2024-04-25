@@ -20,7 +20,7 @@ function Home() {
 							<div className="headingDescription">
 								<p>Your data belongs to you. Key Vault enables you to store and sync passwords and passkeys wherever is best for you.</p>
 							</div>
-							<a href = "/getstarted">
+							<a href = "/signup">
 								<button className="buttons">Get Started</button>
 							</a>
 						</div>
