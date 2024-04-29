@@ -14,7 +14,7 @@ function App() {
 	return (
 		<>
 			<Header></Header>
-			<BrowserRouter basename='keyVault'>
+			<BrowserRouter basename="/">
 				<Routes>
 						<Route path="/" element={<Home/>}/>
 						<Route path="/team" element={<Team/>}/>
