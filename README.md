@@ -34,7 +34,6 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 
 - **Styling**:
   - CSS
-  - Bootstrap
 
 ---
 
@@ -86,4 +85,13 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 - **Password Generator**: Incorporate a password generator feature to help users create strong and unique passwords.
 - **Browser Extensions**: Create browser extensions for popular browsers to facilitate password autofill and management.
 
+---
+
+## Images
+
+![image](prototypeImages/demoOne.png)
+![image](prototypeImages/demoTwo.png)
+![image](prototypeImages/demoThree.png)
+![image](prototypeImages/demoFour.png)
+![image](prototypeImages/demoFive.png)
 ---
