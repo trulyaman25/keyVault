@@ -7,14 +7,14 @@ import Signup from "./components/signup/signup"
 import Signin from "./components/signin/signin"
 import Team from "./components/team/team"
 import Dashboard from "./components/dashboard/dashboard"
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
 	return (
 		<>
 			<Header></Header>
-			<BrowserRouter basename="/">
+			<Router>
 				<Routes>
 						<Route path="/" element={<Home/>}/>
 						<Route path="/team" element={<Team/>}/>
@@ -22,7 +22,7 @@ function App() {
 						<Route path="/signin" element={<Signin/>}/>
 						<Route path="/dashboard" element={<Dashboard/>}/>
 				</Routes>
-			</BrowserRouter>
+			</Router>
 			<Footer></Footer>
 		</>
 	)
