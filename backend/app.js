@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-mongoose.connect( "mongodb+srv://amanwhoooo:vT5ecPe5ZtH4fMYu@cluster0.vygshnz.mongodb.net/keyVault")
+mongoose.connect("mongodb+srv://amanwhoooo:16MZ3UNRyDEF93rd@cluster0.vygshnz.mongodb.net/keyVault")
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 

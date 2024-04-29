@@ -14,24 +14,24 @@ function Team() {
 
 
             <section className='section' id='cardSection'>
-                <div className="contentSection">
+                <div className="contentSection" id='cardHolder'>
                     <card className = 'nameCard' id = "amanCard">
                         <div className="profilePhoto"></div>
                         <div className="name">Aman Kumar</div>
                         <div className="preDescription">-Full Stack Developer</div>
-                        <div className="details">Student at the National Institute of Technology in Raipur, deeply involved in his Information Technology studies, On track to graduate in 2026. excelling particularly in full-stack development.</div>
+                        <div className="details">Specializing in front-end development, excels in designing user interfaces. He combines creativity and technical skills to create engaging websites. Aiming for impactful contributions, showcasing dedication to innovation and user experience.</div>
+                    </card>
+                    <card className = 'nameCard' id = "anshCard">
+                        <div className="profilePhoto"></div>
+                        <div className="name">Ansh Shrivastav</div>
+                        <div className="preDescription">-Backend Developer</div>
+                        <div className="details">Specializes in backend development. He uses his problem-solving skills to make meaningful contributions to tech projects. By aligning his abilities with his goals, he shows his dedication to learning and improving.</div>
                     </card>
                     <card className = 'nameCard' id = "aakashCard">
                         <div className="profilePhoto"></div>
                         <div className="name">Aakash Ranjan</div>
                         <div className="preDescription">-Frontend Developer</div>
-                        <div className="details">Student at the National Institute of Technology in Raipur, Information Technology studies are a deep passion. Set to graduate in 2026, he has honed his skills in back-end development.</div>
-                    </card>
-                    <card className = 'nameCard' id = "yashCard">
-                        <div className="profilePhoto"></div>
-                        <div className="name">Yashwardhan Srivastava</div>
-                        <div className="preDescription">-Backend Developer</div>
-                        <div className="details">Student at the National Institute of Technology in Raipur, back-end development is a forte he's embraced wholeheartedly. Expected to graduate in 2026,</div>
+                        <div className="details">IT student at NIT Raipur, loves coding challenges. He uses creativity and analysis to solve problems. He aims to contribute meaningfully, matching his skills with his tech goals, showing his dedication to learning and innovation.</div>
                     </card>
                 </div>
             </section>
