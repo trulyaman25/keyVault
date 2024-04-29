@@ -89,9 +89,9 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 
 ## Images
 
-![image](prototypeImages/demoOne.png)
-![image](prototypeImages/demoTwo.png)
-![image](prototypeImages/demoThree.png)
-![image](prototypeImages/demoFour.png)
-![image](prototypeImages/demoFive.png)
+![image](src/components/assets/images/prototypeImages/demoOne.png)
+![image](src/components/assets/images/prototypeImages/demoTwo.png)
+![image](src/components/assets/images/prototypeImages/demoThree.png)
+![image](src/components/assets/images/prototypeImages/demoFour.png)
+![image](src/components/assets/images/prototypeImages/demoFive.png)
 ---
