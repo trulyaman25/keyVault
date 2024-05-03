@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './dashboardStyles.css';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function Dashboard() {
     const [website, setWebsite] = useState('');

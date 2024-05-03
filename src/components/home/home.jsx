@@ -1,7 +1,8 @@
-import React from 'react'
-import {useTypewriter, Cursor} from 'react-simple-typewriter'
-import '../globalStyles.css'
-import './homeStyles.css'
+import React from 'react';
+import '../globalStyles.css';
+import './homeStyles.css';
+import {useTypewriter, Cursor} from 'react-simple-typewriter';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Home() {
     const [typeEffect] = useTypewriter({
@@ -10,6 +11,9 @@ function Home() {
 		typeSpeed: 125,
 		deleteSpeed: 40,
 	})
+
+	const { loginWithRedirect } = useAuth0();
+
 	return (
 		<>
 			<section className='section'>
@@ -20,9 +24,7 @@ function Home() {
 							<div className="headingDescription">
 								<p>Your data belongs to you. Key Vault enables you to store and sync passwords and passkeys wherever is best for you.</p>
 							</div>
-							<a href = "/signup">
-								<button className="buttons">Get Started</button>
-							</a>
+								<button className="buttons" onClick={() => loginWithRedirect()}>Get Started</button>
 						</div>
 					</div>
 					<div class="illustrationOne"></div>
