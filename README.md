@@ -30,8 +30,8 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 - **Backend**:
   - Node.js
   - Express.js
+  - auth0 (for authenticating user credentials for signing in)
   - MongoDB (for storing user credentials)
-
 - **Styling**:
   - CSS
 
@@ -49,7 +49,7 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 - Update the MongoDB connection string in `app.js`.
 
 5. Start the development server:
-6. Open your browser and navigate to `http://localhost:3000` to access the application.
+6. Open your browser and navigate to `http://localhost:5173` to access the application.
 
 ---
 
