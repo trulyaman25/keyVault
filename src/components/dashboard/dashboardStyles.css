@@ -8,11 +8,6 @@
 
 .dashboardContentSection {
     width: 84%;
-	height: 100%;
-	display: flex;
-    flex-direction: column;
-	align-items: center;
-    box-sizing: border-box;
 }
 
 .userDataSection {
@@ -24,7 +19,7 @@
 }
 
 .greetingsCard{
-    height: 130px;
+    height: 170px;
     width: 530px;
     padding: 5px;
     border-radius: 30px;
@@ -124,27 +119,32 @@ label{
     text-align: center;
 }
 
-.todo-item {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+.savedDataHolder {
+    min-height: 735px;
+    max-height: 735px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gunmetal);
+    box-shadow: 5px 5px 25px #10101042;
+    border-radius: 35px;
 }
 
 .savedDataSection {
-    width: 55%;
-    min-height: 700px;
-    max-height: 700px;
+    width: 100%;
+    min-height: 635px;
+    max-height: 635px;
     padding: 25px;
     border-radius: 35px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: start;
     align-items: center;
     box-sizing: border-box;
     background-color: rgb(246, 253, 255);
-    box-shadow: 5px 5px 25px #10101042;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .savedDataSection h3 {
@@ -153,9 +153,25 @@ label{
     text-align: center;
 }
 
+.savedDataLabel{
+    width: 750px;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.savedDataLabel h1{
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+}
+
 .savedEntry {
     height: 50px;
-    width: 700px;
+    width: 650px;
     margin: 10px;
     padding: 25px;
     border-radius: 25px;

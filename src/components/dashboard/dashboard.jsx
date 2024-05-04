@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './dashboardStyles.css';
 import { useAuth0 } from "@auth0/auth0-react";
+import { v4 as uuidv4 } from 'uuid';
 
 function Dashboard() {
     const [website, setWebsite] = useState('');
@@ -22,6 +23,7 @@ function Dashboard() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newEntry = {
+            id: uuidv4(),
             website: website,
             username: username,
             password: password,
@@ -52,10 +54,12 @@ function Dashboard() {
             });
     };
 
-    const handleDelete = (index) => {
-        const updatedEntries = savedEntries.filter((entry, i) => i !== index);
+    const handleDelete = (event, id) => {
+        event.stopPropagation();
+        const updatedEntries = savedEntries.filter(entry => entry.id !== id);
         setSavedEntries(updatedEntries);
     };
+    
 
     const { isAuthenticated, user } = useAuth0();
 
@@ -66,9 +70,9 @@ function Dashboard() {
                     <div className="userInputSection">
                         <div className="greetingsCard">
                             {isAuthenticated && <h1 className='greetingText'>
-                                                    <div className="wel">Welcome</div>
-                                                    {user.name},
-                                                </h1>}
+                                <div className="welcome">Welcome</div>
+                                {user.name},
+                            </h1>}
                         </div>
                         <div className="signInSection">
                             <div className='signInCardLabel'>Enter Data</div>
@@ -110,7 +114,13 @@ function Dashboard() {
                         </div>
                     </div>
 
-                    <div className="savedDataSection">
+
+                    <div className="savedDataHolder">
+                        <div className="savedDataLabel">
+                            <h1>Saved Entry</h1>
+                        </div>
+
+                        <div className="savedDataSection">
                         <div id="dataList" className="data-list">
                             {savedEntries.map((entry, index) => (
                                 <div
@@ -132,13 +142,15 @@ function Dashboard() {
                                                 </div>
                                                 <div className="dropButtonSection">
                                                     <button className='copyButton' onClick={() => copyToClipboard(entry.password, index)}>Copy Password</button>
-                                                    <button className='deleteButton' onClick={() => handleDelete(index)}>Delete</button>
+                                                    <button className='deleteButton' onClick={(event) => handleDelete(event, entry.id)}>Delete</button>
+
                                                 </div>
                                             </div>
                                         </>
                                     )}
                                 </div>
                             ))}
+                        </div>
                         </div>
                     </div>
                 </div>
