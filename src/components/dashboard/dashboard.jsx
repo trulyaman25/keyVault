@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './dashboardStyles.css';
 import { useAuth0 } from "@auth0/auth0-react";
+import './dashboardStyles.css';
 import { v4 as uuidv4 } from 'uuid';
 
 function Dashboard() {
@@ -9,16 +9,22 @@ function Dashboard() {
     const [password, setPassword] = useState('');
     const [savedEntries, setSavedEntries] = useState([]);
 
-    useEffect(() => {
-        const storedEntries = localStorage.getItem('savedEntries');
-        if (storedEntries) {
-            setSavedEntries(JSON.parse(storedEntries));
-        }
-    }, []);
+    const { isAuthenticated, user } = useAuth0();
 
     useEffect(() => {
-        localStorage.setItem('savedEntries', JSON.stringify(savedEntries));
-    }, [savedEntries]);
+        if (isAuthenticated) {
+            const storedEntries = localStorage.getItem(user.sub);
+            if (storedEntries) {
+                setSavedEntries(JSON.parse(storedEntries));
+            }
+        }
+    }, [isAuthenticated, user]);
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            localStorage.setItem(user.sub, JSON.stringify(savedEntries));
+        }
+    }, [isAuthenticated, user, savedEntries]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -59,9 +65,6 @@ function Dashboard() {
         const updatedEntries = savedEntries.filter(entry => entry.id !== id);
         setSavedEntries(updatedEntries);
     };
-    
-
-    const { isAuthenticated, user } = useAuth0();
 
     return (
         <div className="dashboardSection">
