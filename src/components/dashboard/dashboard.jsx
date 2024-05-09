@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import './dashboardStyles.css';
-import { v4 as uuidv4 } from 'uuid';
 import CryptoJS from 'crypto-js';
-
+import axios from 'axios';
 
 function Dashboard() {
     const [website, setWebsite] = useState('');
@@ -14,35 +13,44 @@ function Dashboard() {
     const { isAuthenticated, user } = useAuth0();
 
     useEffect(() => {
-        if (isAuthenticated) {
-            const storedEntries = localStorage.getItem(user.sub);
-            if (storedEntries) {
-                setSavedEntries(JSON.parse(storedEntries));
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/api/passwords');
+                const passwords = response.data;
+                if (Array.isArray(passwords)) {
+                    setSavedEntries(passwords);
+                } else {
+                    console.error('Error: Response data is not an array');
+                }
+            } catch (error) {
+                console.error('Error fetching passwords:', error);
             }
-        }
-    }, [isAuthenticated, user]);
-
-    useEffect(() => {
-        if (isAuthenticated) {
-            localStorage.setItem(user.sub, JSON.stringify(savedEntries));
-        }
-    }, [isAuthenticated, user, savedEntries]);
-
+        };
     
-    const handleSubmit = (event) => {
+        if (isAuthenticated) {
+            fetchData();
+        }
+    }, [isAuthenticated]);
+    
+    const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log('Form submitted');
         const ciphertext = CryptoJS.AES.encrypt(password, 'asdfghjkl').toString();
         const newEntry = {
-            id: uuidv4(),
             website: website,
             username: username,
             password: ciphertext,
-            expanded: false,
         };
-        setSavedEntries([...savedEntries, newEntry]);
-        setWebsite('');
-        setUsername('');
-        setPassword('');
+        try {
+            const response = await axios.post('http://localhost:5000/api/passwords', newEntry);
+            const savedEntry = Array.isArray(response.data) ? response.data : [response.data];
+            setSavedEntries([...savedEntries, ...savedEntry]);
+            setWebsite('');
+            setUsername('');
+            setPassword('');
+        } catch (error) {
+            console.error('Error saving password:', error);
+        }
     };
 
     const handleEntryClick = (index) => {
@@ -67,11 +75,19 @@ function Dashboard() {
             });
     };
 
-    const handleDelete = (event, id) => {
+    const handleDelete = async (event, id) => {
         event.stopPropagation();
-        const updatedEntries = savedEntries.filter(entry => entry.id !== id);
-        setSavedEntries(updatedEntries);
+        console.log('Deleting entry with ID:', id);
+        try {
+            await axios.delete(`http://localhost:5000/api/passwords/${id}`);
+            const updatedEntries = savedEntries.filter(entry => entry._id !== id);
+            setSavedEntries(updatedEntries);
+        } catch (error) {
+            console.error('Error deleting password:', error);
+        }
     };
+    
+    
 
     const decryptPassword = (cipherText) => {
         const bytes = CryptoJS.AES.decrypt(cipherText, 'asdfghjkl');
@@ -124,7 +140,7 @@ function Dashboard() {
                                     />
                                 </p>
                                 <p>
-                                    <button type="submit" className="saveButton">Save</button>
+                                    <button type="submit" className="saveButton" onClick={handleSubmit}>Save</button>
                                 </p>
                             </form>
                         </div>
@@ -149,17 +165,26 @@ function Dashboard() {
                                         <>
                                             <div className="detailSection">
                                                 <div className="dropDetailSection">
-                                                    <span className='details'><span className='label'>Website:</span> <span className='labelValue'>{entry.website}</span></span>
+                                                    <span className='details'>
+                                                        <span className='label'>Website:</span>
+                                                        <span className='labelValue'>{entry.website}</span>
+                                                    </span>
                                                     <br />
-                                                    <span className='details'><span className='label'>Username:</span> <span className='labelValue'>{entry.username}</span></span>
+                                                    <span className='details'>
+                                                        <span className='label'>Username:</span>
+                                                        <span className='labelValue'>{entry.username}</span>
+                                                    </span>
                                                     <br />
-                                                    <span className='details'><span className='label'>Password:</span> <span className='labelValue'>{decryptPassword(entry.password)}</span></span>
+                                                    <span className='details'>
+                                                        <span className='label'>Password:</span>
+                                                        <span className='labelValue'>{decryptPassword(entry.password)}</span>
+                                                    </span>
                                                     <br />
                                                 </div>
+
                                                 <div className="dropButtonSection">
                                                     <button className='copyButton' onClick={() => copyToClipboard(entry.password, index)}>Copy Password</button>
-                                                    <button className='deleteButton' onClick={(event) => handleDelete(event, entry.id)}>Delete</button>
-
+                                                    <button className='deleteButton' onClick={(event) => handleDelete(event, entry._id)}>Delete</button>
                                                 </div>
                                             </div>
                                         </>
