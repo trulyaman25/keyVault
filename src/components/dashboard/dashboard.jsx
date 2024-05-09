@@ -15,7 +15,7 @@ function Dashboard() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/passwords');
+                const response = await axios.get(`http://localhost:5000/api/passwords?userId=${user.sub}`);
                 const passwords = response.data;
                 if (Array.isArray(passwords)) {
                     setSavedEntries(passwords);
@@ -30,13 +30,14 @@ function Dashboard() {
         if (isAuthenticated) {
             fetchData();
         }
-    }, [isAuthenticated]);
+    }, [isAuthenticated, user.sub]);
     
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log('Form submitted');
         const ciphertext = CryptoJS.AES.encrypt(password, 'asdfghjkl').toString();
         const newEntry = {
+            userId: user.sub,
             website: website,
             username: username,
             password: ciphertext,
