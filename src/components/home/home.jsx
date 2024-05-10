@@ -1,8 +1,10 @@
-import React from 'react';
-import '../globalStyles.css';
-import './homeStyles.css';
-import {useTypewriter, Cursor} from 'react-simple-typewriter';
-import { useAuth0 } from "@auth0/auth0-react";
+import React from 'react'
+import '../globalStyles.css'
+import './homeStyles.css'
+import {useTypewriter, Cursor} from 'react-simple-typewriter'
+import { useAuth0 } from "@auth0/auth0-react"
+import Footer from '../footer/footer'
+import Header from '../header/header'
 
 function Home() {
     const [typeEffect] = useTypewriter({
@@ -16,6 +18,7 @@ function Home() {
 
 	return (
 		<>
+			<Header/>
 			<main>
 				<section className='section'>
 					<div class="contentSection">
@@ -53,6 +56,7 @@ function Home() {
 					</div>
 				</section>
 			</main>
+			<Footer />
 		</>
 	)
 }

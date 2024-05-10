@@ -20,7 +20,7 @@ function Header() {
 						<a href = "/"><button className="buttons">Home</button></a>
 						{
 							isAuthenticated ? (
-								<a href = "/dashboard">
+								<a href = "/revampedDashboard">
 									<button className="buttons">Dashboard</button>
 								</a>
 							) : (

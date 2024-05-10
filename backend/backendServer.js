@@ -16,8 +16,11 @@ mongoose.connect('mongodb+srv://amanwhoooo:16MZ3UNRyDEF93rd@cluster0.vygshnz.mon
 const passwordSchema = new mongoose.Schema({
   userId: String,
   website: String,
+  websiteType: String,
   username: String,
+  email: String,
   password: String,
+  comment: String,
 });
 
 const Password = mongoose.model('Password', passwordSchema);
@@ -35,7 +38,7 @@ app.post('/api/passwords', async (req, res) => {
 app.get('/api/passwords', async (req, res) => {
   const { userId } = req.query;
   try {
-    const passwords = await Password.find({ userId }); // Fetch passwords for a specific userId
+    const passwords = await Password.find({ userId });
     res.status(200).json(passwords);
   } catch (error) {
     res.status(500).json({ error: 'Error fetching passwords' });

@@ -33,6 +33,42 @@
 	src: url('./assets/fonts/poppins/Poppins-ExtraBold.ttf');
 }
 
+@font-face {
+	font-family: albula;
+	src: url('../components/assets/fonts/albula/Albula-Regular.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: albula;
+	src: url('../components/assets/fonts/albula/Albula-Medium.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: albula;
+	src: url('../components/assets/fonts/albula/Albula-SemiBold.ttf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: albula;
+	src: url('../components/assets/fonts/albula/Albula-Bold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: albula;
+	src: url('../components/assets/fonts/albula/Albula-ExtraBold.ttf');
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: albula;
+	src: url('../components/assets/fonts/albula/Albula-Heavy.ttf');
+	font-weight: 900;
+}
+
 * {
 	margin: 0px;
 	padding: 0px;

@@ -18,6 +18,107 @@
     align-items: center;
 }
 
+.greetingsCard{
+    height: 170px;
+    width: 530px;
+    padding: 5px;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    box-shadow: 5px 5px 25px #10101042;
+}
+
+.greetingText{
+    margin: 0px 0px 0px 30px;
+    text-align: left;
+    font-family: poppins;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.signInSection {
+    height: 475px;
+    width: 450px;
+    display: flex;
+    padding: 40px;
+    margin-top: 10px;
+    border-radius: 30px;
+    flex-flow: column;
+    background-color: #ffffff;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 25px #10101042;
+}
+
+.signInCardLabel {
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+.signInForm {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: -2.5px;
+}
+
+.signInForm p {
+    margin: 10px 0px 5px 0px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.signInForm input {
+    background-color: var(--picton-blue);
+    box-sizing: border-box;
+    padding: 0px 25px 0px 25px;
+    border: none;
+    border-color: black;
+    border-radius: 15px;
+    height: 50px;
+    width: 400px;
+}
+
+label{
+    color: #353a3a;
+    font-size: 17.5px;
+    font-weight: normal;
+    font-weight: 500;
+    margin: 0px 0px 5px 10px;
+}
+
+.saveButton {
+    background-color: var(--moonstone);
+    color: rgb(255, 255, 255);
+    height: 50px;
+    width: 300px;
+    font-family: poppins;
+    font-weight: 500;
+    font-size: 30px;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 30px 0px 0px 0px;
+}
+
+.saveButton:hover {
+    background-color: var(--cerulean);
+    cursor: pointer;
+}
+
+#login {
+    margin-top: 10px;
+    text-align: center;
+}
+
 .savedDataHolder {
     min-height: 735px;
     max-height: 735px;
