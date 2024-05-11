@@ -12,7 +12,7 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 
 ## Features
 
-- **Secure Storage**: Store passwords and sensitive information securely.
+- **Data Encryption**: Store passwords and sensitive information in encrypted form.
 - **User-Friendly Interface**: Intuitive UI for adding, viewing, and copying passwords.
 - **Local Storage Persistence**: Persist user entries across sessions using local storage.
 - **Entry Expansion**: View additional details of entries such as username and password.
@@ -46,7 +46,7 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 3. Install dependencies:
 4. Set up MongoDB:
 - Create a MongoDB Atlas account and set up a cluster.
-- Update the MongoDB connection string in `app.js`.
+- Update the MongoDB connection string in `backendServer.js`.
 
 5. Start the development server:
 6. Open your browser and navigate to `http://localhost:5173` to access the application.
@@ -64,15 +64,13 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 3. **Dashboard**:
 - Add, view, and manage your passwords and other sensitive information in the dashboard.
 
-4. **Security Note**:
-- Ensure that no sensitive information is shared or stored in insecure environments.
 
 ---
 
 ## Improvements
 
-- **Enhanced Security Features**: Implement additional security measures such as encryption for storing passwords.
-- **User Authentication**: Integrate user authentication to enhance account security.
+- **Password Strength Checker:** Implement a feature that checks the strength of user passwords to ensure they meet certain criteria.
+- **Two-Factor Authentication (2FA):** Offer users the option to enable two-factor authentication for an added layer of security during login.
 - **Improved UX/UI**: Enhance user experience with a more intuitive and visually appealing interface.
 - **Cross-Device Sync**: Enable synchronization of passwords across multiple devices for user convenience.
 
@@ -89,6 +87,13 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 
 ## Images
 
-  <!-- ![image](src/components/assets/images/prototypeImages/homeDemo.png) -->
+  ![image](src/components/assets/images/prototypeImages/imageOne.png)
+  ![image](src/components/assets/images/prototypeImages/imageTwo.png)
+  ![image](src/components/assets/images/prototypeImages/imageThree.png)
+  ![image](src/components/assets/images/prototypeImages/imageFour.png)
+  ![image](src/components/assets/images/prototypeImages/imageFive.png)
+  ![image](src/components/assets/images/prototypeImages/imageSix.png)
+  ![image](src/components/assets/images/prototypeImages/imageSeven.png)
+  ![image](src/components/assets/images/prototypeImages/imageEight.png)
 
 ---

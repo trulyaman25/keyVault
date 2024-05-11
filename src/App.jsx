@@ -4,6 +4,7 @@ import Footer from "./components/footer/footer"
 import Home from "./components/home/home"
 import Team from "./components/team/team"
 import Dashboard from './components/dashboard/dashboard'
+import DashboardNavbar from './components/dashboard/dashboardComponents/dashboardNavbar/dashboardNavbar'
 import Notes from './components/dashboard/dashboardComponents/notes/notes'
 import Profile from './components/dashboard/dashboardComponents/profile/profile'
 import Settings from './components/dashboard/dashboardComponents/settings/settings'
@@ -24,6 +25,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/team" element={<Team />} />
+                    <Route path="/dashboardNavbar" element={<DashboardNavbar />} />
 
                     {isAuthenticated ? (
                         <Route path="/dashboard" element={<Dashboard />} />
@@ -42,7 +44,7 @@ function App() {
                     ) : (
                         <Route path="/" element={<Navigate to="/" replace />} />
                     )}
-                    
+
                     {isAuthenticated ? (
                         <Route path="/settings" element={<Settings />} />
                     ) : (
