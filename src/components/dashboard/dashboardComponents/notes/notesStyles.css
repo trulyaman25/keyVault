@@ -7,13 +7,17 @@
     z-index: 1;
 }
 
-.md_primaryScreen {
+.un_primaryScreen {
     width: calc(100% - 350px);
     height: 100vh;
-    overflow-y: scroll;
     position:fixed;
     top: 0px;
     right: 0px;
     padding-left: 350px;
+    overflow-y: scroll;
     z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorThree);
 }

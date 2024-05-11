@@ -26,7 +26,7 @@ function App() {
                     <Route path="/team" element={<Team />} />
 
                     {isAuthenticated ? (
-                        <Route path="/revampedDashboard" element={<Dashboard />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
                     ) : (
                         <Route path="/" element={<Navigate to="/" replace />} />
                     )}

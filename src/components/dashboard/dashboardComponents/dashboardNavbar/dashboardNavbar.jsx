@@ -17,7 +17,7 @@ function DashboardNavbar() {
                 </div>
 
                 <ul className='d_navbarList'>
-                    <a href="/revampedDashboard" className="d_navButtons">
+                    <a href="/dashboard" className="d_navButtons">
                         <img src={LoginIcon} alt="Login Icon" id='d_loginIcon'/>
                         <li className='d_navButtonLabel'>Logins</li>
                     </a>

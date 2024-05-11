@@ -125,7 +125,7 @@ function RevampedDashboard () {
             <div className='md_primaryScreen'>
                 <div className='md_toolBar'>
                     <div className='md_tk_greetingSection'>
-                        <span>Welcome <span style={{ fontFamily: 'albula', fontWeight: 700 }}>{user.name},</span></span>
+                        <span>Welcome <span style={{ fontFamily: 'albula', fontWeight: 700 }}>{user.given_name} {user.family_name},</span></span>
                     </div>
 
                     <button className='md_tk_button' onClick={toggleActivePanel}>
