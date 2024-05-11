@@ -1,11 +1,10 @@
-import '../../revampedDashboardStyles.css'
 import './dashboardNavbarStyles.css'
 import { useAuth0 } from "@auth0/auth0-react";
-import ProfileIcon from '../../../../assets/icons/d_profileIcon.svg'
-import LoginIcon from '../../../../assets/icons/d_lockIcon.svg'
-import NotesIcon from '../../../../assets/icons/d_docsIcon.svg'
-import GearIcon from '../../../../assets/icons/d_gearIcon.svg'
-import ExitIcon from '../../../../assets/icons/d_exitIcon.svg'
+import ProfileIcon from '../../../assets/icons/d_profileIcon.svg'
+import LoginIcon from '../../../assets/icons/d_lockIcon.svg'
+import NotesIcon from '../../../assets/icons/d_docsIcon.svg'
+import GearIcon from '../../../assets/icons/d_gearIcon.svg'
+import ExitIcon from '../../../assets/icons/d_exitIcon.svg'
 
 function DashboardNavbar() {
     const { logout } = useAuth0();

@@ -3,11 +3,10 @@ import Header from "./components/header/header"
 import Footer from "./components/footer/footer"
 import Home from "./components/home/home"
 import Team from "./components/team/team"
-import RevampedDashboard from "./components/dashboard/revampedDashboard/revampedDashboard"
-import Notes from "./components/dashboard/revampedDashboard/dashboardComponents/notes/notes"
-import Profile from "./components/dashboard/revampedDashboard/dashboardComponents/profile/profile"
-import Settings from "./components/dashboard/revampedDashboard/dashboardComponents/settings/settings"
-import DashboardNavbar from './components/dashboard/revampedDashboard/dashboardComponents/dashboardNavbar/dashboardNavbar'
+import Dashboard from './components/dashboard/dashboard'
+import Notes from './components/dashboard/dashboardComponents/notes/notes'
+import Profile from './components/dashboard/dashboardComponents/profile/profile'
+import Settings from './components/dashboard/dashboardComponents/settings/settings'
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -27,7 +26,7 @@ function App() {
                     <Route path="/team" element={<Team />} />
 
                     {isAuthenticated ? (
-                        <Route path="/revampedDashboard" element={<RevampedDashboard />} />
+                        <Route path="/revampedDashboard" element={<Dashboard />} />
                     ) : (
                         <Route path="/" element={<Navigate to="/" replace />} />
                     )}
