@@ -16,4 +16,5 @@
     right: 0px;
     padding-left: 350px;
     z-index: 0;
+    background-color: var(--colorSeven);
 }
