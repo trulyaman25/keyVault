@@ -31,7 +31,6 @@
     right: 0px;
     padding-left: 350px;
     z-index: 0;
-    background-color: var(--colorTwelve);
 }
 
 .md_toolBar {
@@ -135,7 +134,7 @@
 
 #md_panel_sectionLabel {
     font-weight: 500;
-    margin: 0px 0px 15px 7.5px;
+    margin: 0px 0px 10px 7.5px;
 }
 
 #md_panel_name {
@@ -145,7 +144,7 @@
 #md_panel_greeting_subheading {
     color: #192124;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .md_panelInput {
@@ -190,9 +189,15 @@
     border-radius: 10px;
 }
 
+.md_panel_submitButtonHolder {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 
 .md_panel_saveButton {
     color: white;
+    margin: 20px  5px 0px 0px;
     background-color: var(--colorFive);
     transition: background-color 0.2s ease-in-out;
 }
@@ -209,4 +214,143 @@
 
 .md_panel_cancelButton:hover {
     border-color: var(--colorTen);
+}
+
+.md_logins_section {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.md_loginsHeading {
+    font-weight: 500;
+    color: #3c3c3c;
+}
+
+.md_login_DataList {
+    margin: 30px 0px 0px 0px;
+}
+
+.md_savedEntry {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.md_savedEntry:hover {
+    background-color: var(--colorTwelve);
+}
+
+.md_savedEntryStaticData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.md_savedEntryInfoSection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.md_savedEntryIcon {
+    width: 45px;
+    height: 45px;
+    max-width: 50px;
+    max-height: 50px;
+    padding: 5px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--colorFive);
+    user-select: none;
+}
+
+.md_savedEntryHighlitedLabel {
+    margin-left: 20px;
+    user-select: none;
+}
+
+.md_savedEntryDropIcon {
+    user-select: none;
+    width: 30px;
+}
+
+.md_savedEntryDropIcon:hover {
+    transform: scale(1.2);
+}
+
+.detailSection {
+    display: none;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.expanded .detailSection {
+    display: block;
+}
+
+.detailSection {
+    margin-top: 10px;
+}
+
+.dropDetailSection {
+    width: 80%;
+    height: fit-content;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.md_dropDetailList {
+    list-style-type: none;
+}
+
+.md_dropSectionDetailHeadings {
+    font-size: 22.5px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.md_dropSectionDataValueLabel {
+    font-size: 18px;
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+
+.md_dropDatValue {
+    font-size: 15px;
+    font-style: italic;
+    user-select: all;
+    color: #444444;
+}
+
+.md_controllButtons {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.md_buttons{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.md_panel_cancelIconHolder {
+    margin: 0px 0px 20px 0px;
+}
+
+.md_panel_cancelIcon {
+    width: 20px;
 }

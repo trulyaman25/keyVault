@@ -1,10 +1,12 @@
+import './notesStyles.css'
 import React from "react";
+import DashboardNavbar from "../dashboardNavbar/dashboardNavbar";
 
 function Notes() {
     return (
-        <div className="test">
-            Notes
-        </div>
+            <div className='md_navBar'>
+                <DashboardNavbar />
+            </div>
     );
 }
 

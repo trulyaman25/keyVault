@@ -1,7 +1,19 @@
-.test{
-    width: 100%;
+.md_navBar {
+    left: 0px;
+    position: fixed;
+    width: 350px;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #253237ff;
+    z-index: 1;
+}
+
+.md_primaryScreen {
+    width: calc(100% - 350px);
+    height: 100vh;
+    overflow-y: scroll;
+    position:fixed;
+    top: 0px;
+    right: 0px;
+    padding-left: 350px;
+    z-index: 0;
 }

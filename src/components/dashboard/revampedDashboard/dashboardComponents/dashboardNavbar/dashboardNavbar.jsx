@@ -18,20 +18,20 @@ function DashboardNavbar() {
                 </div>
 
                 <ul className='d_navbarList'>
-                    <a href="./revampedDashboard" className="d_navButtons">
+                    <a href="/revampedDashboard" className="d_navButtons">
                         <img src={LoginIcon} alt="Login Icon" id='d_loginIcon'/>
                         <li className='d_navButtonLabel'>Logins</li>
                     </a>
-                    <a href="./RevampedDashboard/notes" className="d_navButtons">
+                    <a href="/notes" className="d_navButtons">
                         <img src={NotesIcon} alt="Login Icon" id='d_loginIcon'/>
                         <li className='d_navButtonLabel'>Secure Notes</li>
                     </a>
-                    <a href="./RevampedDashboard/profile" className="d_navButtons">
+                    <a href="/profile" className="d_navButtons">
                         <img src={ProfileIcon} alt="Login Icon" id='d_loginIcon'/>
                         <li className='d_navButtonLabel'>Profile</li>
                     </a>
 
-                    <a href="./RevampedDashboard/settings" className="d_navButtons">
+                    <a href="/settings" className="d_navButtons">
                         <img src={GearIcon} alt="Settings Icon" id='d_settingsIcon'/>
                         <li className='d_navButtonLabel'>Settings</li>
                     </a>
