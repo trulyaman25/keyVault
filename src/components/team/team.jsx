@@ -19,7 +19,7 @@ function Team() {
                         <div className="profilePhoto"></div>
                         <div className="name">Aman Kumar</div>
                         <div className="preDescription">-Full Stack Developer</div>
-                        <div className="details">Specializing in front-end development, excels in designing user interfaces. He combines creativity and technical skills to create engaging websites. Aiming for impactful contributions, showcasing dedication to innovation and user experience.</div>
+                        <div className="details">Specializing in front-end and Back-end development, excels in designing user interfaces. He combines creativity and technical skills to create engaging websites. Aiming for impactful contributions, showcasing dedication to innovation and user experience.</div>
                     </card>
                     <card className = 'nameCard' id = "anshCard">
                         <div className="profilePhoto"></div>

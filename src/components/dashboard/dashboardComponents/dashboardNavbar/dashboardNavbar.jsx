@@ -38,7 +38,7 @@ function DashboardNavbar() {
 
                 <a href="/" className="d_navButtons" onClick={ () => logout({ returnTo: window.location.origin }) }>
                     <img src={ExitIcon} alt="Exit Icon" id='d_settingsIcon'/>
-                    <li className='d_navButtonLabel'>Exit Dashboard</li>
+                    <li className='d_navButtonLabel'>Exit / Log Out</li>
                 </a>
             </nav>
         </>

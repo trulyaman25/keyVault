@@ -24,7 +24,7 @@ function Profile() {
                                     <div className='pp_cursorEvent'>@{user.nickname}</div>
                                 </div>
 
-                            <button className='pp_logoutButton' onClick={ () => logout({ returnTo: window.location.origin }) }>Log Out</button>
+                            <button className='pp_logoutButton pp_cursorEvent' onClick={ () => logout({ returnTo: window.location.origin }) }>Log Out</button>
                             
                             <div className="app-bottom">
                                 <div className="app__block">

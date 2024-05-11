@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--colorThree);
+    background-color: var(--colorOne);
 }
 
 .align-center, .container {
@@ -50,7 +50,7 @@
     width: 290px;
     height: 500px;
     border-radius: 20px;
-    box-shadow: 0 24px 40px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 24px 40px 0 rgba(0, 0, 0, 0.262);
     overflow: hidden;
     filter: blur(0);
     background: #fff;
