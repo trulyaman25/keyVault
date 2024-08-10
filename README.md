@@ -40,16 +40,18 @@ KeyVault offers a secure and convenient solution for managing passwords and sens
 ## Installation
 
 1. Clone the repository:
-- git clone https://github.com/trulyaman25/keyvault.git
+```bash
+git clone https://github.com/trulyaman25/keyvault.git
+```
 
 2. Navigate to the project directory:
 3. Install dependencies:
 4. Set up MongoDB:
 - Create a MongoDB Atlas account and set up a cluster.
 - Update the MongoDB connection string in `backendServer.js`.
-
-5. Start the development server:
-6. Open your browser and navigate to `http://localhost:5173` to access the application.
+5. Create environment variables in the .env file
+6. Start the development server:
+7. Open your browser and navigate to `http://localhost:5173` to access the application.
 
 ---
 
