@@ -48,8 +48,11 @@ git clone https://github.com/trulyaman25/keyvault.git
 3. Install dependencies:
 4. Set up MongoDB:
 - Create a MongoDB Atlas account and set up a cluster.
-- Update the MongoDB connection string in `backendServer.js`.
 5. Create environment variables in the .env file
+```bash
+PORT=5000
+MONGO_URI= /keyVault
+```
 6. Start the development server:
 7. Open your browser and navigate to `http://localhost:5173` to access the application.
 
